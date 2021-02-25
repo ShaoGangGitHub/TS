@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MBAShouShiVC" customModule="MobileFourAOC" customModuleProvider="target">
+            <connections>
+                <outlet property="agingLB" destination="lxt-eD-awe" id="qoc-T7-xvW"/>
+                <outlet property="okBtn" destination="HE8-Kh-ppk" id="cic-C4-GSI"/>
+                <outlet property="shouShiView" destination="Unq-cP-ieY" id="8Jd-c7-L88"/>
+                <outlet property="userNameLB" destination="Bwt-X8-mRa" id="HrM-qa-z4J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请设置手势密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwt-X8-mRa">
+                    <rect key="frame" x="146.33333333333334" y="100" width="121.33333333333334" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Unq-cP-ieY" customClass="MBAShouShiView" customModule="MobileFourAOC" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="161" width="414" height="414"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Unq-cP-ieY" secondAttribute="height" multiplier="1:1" id="vqG-TL-R8p"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请再绘制一次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxt-eD-awe">
+                    <rect key="frame" x="155" y="625" width="104" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE8-Kh-ppk">
+                    <rect key="frame" x="40" y="625" width="334" height="52.333333333333371"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="HE8-Kh-ppk" secondAttribute="height" multiplier="913:143" id="YUZ-3x-RSd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="确认" backgroundImage="login"/>
+                    <connections>
+                        <action selector="okAction:" destination="-1" eventType="touchUpInside" id="6iy-uS-O2k"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="lxt-eD-awe" firstAttribute="top" secondItem="Unq-cP-ieY" secondAttribute="bottom" constant="50" id="2ZN-E2-AOg"/>
+                <constraint firstItem="Bwt-X8-mRa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ATV-DG-jjZ"/>
+                <constraint firstAttribute="trailing" secondItem="Unq-cP-ieY" secondAttribute="trailing" id="Cm4-6z-4Ub"/>
+                <constraint firstItem="Unq-cP-ieY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GuE-iR-9Y3"/>
+                <constraint firstItem="Unq-cP-ieY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MEG-P9-POT"/>
+                <constraint firstItem="lxt-eD-awe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ogn-ug-5cr"/>
+                <constraint firstItem="Unq-cP-ieY" firstAttribute="top" secondItem="Bwt-X8-mRa" secondAttribute="bottom" constant="40" id="hdQ-xn-dyt"/>
+                <constraint firstAttribute="trailing" secondItem="HE8-Kh-ppk" secondAttribute="trailing" constant="40" id="i6u-Pt-JST"/>
+                <constraint firstItem="HE8-Kh-ppk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="rrJ-rT-aTh"/>
+                <constraint firstItem="HE8-Kh-ppk" firstAttribute="top" secondItem="Unq-cP-ieY" secondAttribute="bottom" constant="50" id="xP8-LE-I8H"/>
+            </constraints>
+            <point key="canvasLocation" x="124.6376811594203" y="83.967391304347828"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login" width="913" height="143"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
